@@ -4,50 +4,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='cafeteria.css')}}">
 </head>
 <body>
-    <header><h1>Cafetería</h1></header>
-    <main>
+    <header>
+            <img width="75px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdSrijoh9-g9A_NOTaOjgBV9Q_KGL788r_z-GE8NEbAuCrzK1sI493G-M&s=10" alt="IPM">
+
+    <h1 id="titulo1">Cafetería</h1>
+
+    <div class="menu-hamburguesa">
+        <button class="boton-menu">☰</button>
+
+        <div class="menu-desplegable">
+            <a href="{{url_for('videosNE')}}">Videos naves Espaciales</a>
+            <a href="{{url_for('formulario')}}">Formulario</a>
+            <a href="{{url_for('receta')}}">Receta para hacer milanesas</a>
+            <a href="{{url_for('album')}}">Fotos de plantas</a>
+            <a href="{{url_for('index')}}">Volver</a>
+        </div>
+    </div>
+    </header>
+    <main class="menu">
+
         <h2>Infusiones y Bebidas</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_lTrdyaXSmhinLmhpU8LxFV3pPyqC-MpDRyOtx5MNSg&s=10" alt="cafe negro">
-        <h3>Café Nergro ; 2500$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_8U08VNTx7ZeqKxKzThsD1zV2wot95qQmyPbQhI4GIw&s=10" alt="te negro">
-        <h3>Té Negro ; 2000$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx_DKiNZzcfphFsEto6TfO0cgyP3SWmA5MJue-y4usGQ&s=10 alt="jugo">
-        <h3>jugo de naranja/manzana ; 2500$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRytY1zD-BvNnykwvwEkZraiulBVMrFcxNWeik-R5XthA&s=10" alt="matcha">
-        <h3>café matcha ; 5000$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PtiwM2d67Rllx-o0RHDkqJ1ryJ4cFJhbPOsltEw4mQ&s=10" alt="limonada">
-        <h3>limonada ; 3000$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4mJmrUwb1cFdcBZ4Awy2kafs5ou3SNRzen7EVzGaTvQ&s=10" alt="submarino">
-        <h3>submarino ; 3000$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Kugqly4u3RGjpdPSaSPnE4jvXygPRpfrqNbT6mei1A&s=10" alt="mate cocido">
-        <h3>mate cocido ; 2500$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7oL76WBpbdxYjMTg6o4gLFC9OV3DMTjQPcfuyUlI3Tw&s=10" alt="licuado">
-        <h3>licuado de frutas ; 3500$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlRP04F2INvg4Lx_dnGLrVbeQYTuXjh60YzFOPZ9KLVA&s=10" alt="agua">
-        <h3>agua c/gas y s/gas ; 1500$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUqf1WK7buDh-7APyRmF3wVmhSDnKvfj0JAqb_GRhEhA&s=10" alt="leche">
-        <h3>Leche caliente/fria ; 750$</h3>
-        
-        <h2>Comidas</h2>   
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbd8iYhjpcIpTpSM_8bFWwUJ8ZwWd-AEb55UkuehBYkA&s=10" alt="medialunas">
-        <h3>medialunas ; 1000$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfAid81HYqpNpU_2nQs0gP1RoQHUYiNVJBAY7oMkMFnw&s" alt="tostado">
-        <h3>tostado ; 1500$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBz74QFYu2Xz3rmLxwJ_s9xq2iek7c9_jLM4h1sz-6zg&s=10" alt="chipa">
-        <h3>chipá ; 1500$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj0Fn1koxqiJkxuRGQhnsDtMz95Y3cSWJbAQLC9UP5cg&s=10" alt="porcion torta">
-        <h3>porción torta ; 2500$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCxraVzE1GymWAWEJH1RhmRYwwCKUfttyljAgyulHBLg&s=10" alt="tostadas">
-        <h3>porción tostadas ; 3000$</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNgaC_n8ZC77YI-3Y0T3LT68IEoAdBOk8TACpu4GSakg&s=10" alt="cookies">
-        <h3>cookies ; 3000$</h3>
+
+        <section class="productos">
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_lTrdyaXSmhinLmhpU8LxFV3pPyqC-MpDRyOtx5MNSg&s=10" alt="Café negro">
+                <h3>Café Negro</h3>
+                <p>$2500</p>
+            </article>
+
+            <article class="producto">../dia8/formulario.css
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_8U08VNTx7ZeqKxKzThsD1zV2wot95qQmyPbQhI4GIw&s=10" alt="Té negro">
+                <h3>Té Negro</h3>
+                <p>$2000</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx_DKiNZzcfphFsEto6TfO0cgyP3SWmA5MJue-y4usGQ&s=10" alt="Jugo de naranja y manzana">
+                <h3>Jugo de naranja / manzana</h3>
+                <p>$2500</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRytY1zD-BvNnykwvwEkZraiulBVMrFcxNWeik-R5XthA&s=10" alt="Matcha">
+                <h3>Café Matcha</h3>
+                <p>$5000</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PtiwM2d67Rllx-o0RHDkqJ1ryJ4cFJhbPOsltEw4mQ&s=10" alt="Limonada">
+                <h3>Limonada</h3>
+                <p>$3000</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4mJmrUwb1cFdcBZ4Awy2kafs5ou3SNRzen7EVzGaTvQ&s=10" alt="Submarino">
+                <h3>Submarino</h3>
+                <p>$3000</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Kugqly4u3RGjpdPSaSPnE4jvXygPRpfrqNbT6mei1A&s=10" alt="Mate cocido">
+                <h3>Mate Cocido</h3>
+                <p>$2500</p>
+            </article>../dia8/formulario.css
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7oL76WBpbdxYjMTg6o4gLFC9OV3DMTjQPcfuyUlI3Tw&s=10" alt="Licuado de frutas">
+                <h3>Licuado de Frutas</h3>
+                <p>$3500</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlRP04F2INvg4Lx_dnGLrVbeQYTuXjh60YzFOPZ9KLVA&s=10" alt="Agua con gas y sin gas">
+                <h3>Agua c/gas y s/gas</h3>
+                <p>$1500</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUqf1WK7buDh-7APyRmF3wVmhSDnKvfj0JAqb_GRhEhA&s=10" alt="Leche caliente o fría">
+                <h3>Leche caliente / fría</h3>
+                <p>$750</p>
+            </article>
+
+        </section>
+
+
+        <h2>Comidas</h2>
+
+        <section class="productos">
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbd8iYhjpcIpTpSM_8bFWwUJ8ZwWd-AEb55UkuehBYkA&s=10" alt="Medialunas">
+                <h3>Medialunas</h3>
+                <p>$1000</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfAid81HYqpNpU_2nQs0gP1RoQHUYiNVJBAY7oMkMFnw&s" alt="Tostado">
+                <h3>Tostado</h3>
+                <p>$1500</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBz74QFYu2Xz3rmLxwJ_s9xq2iek7c9_jLM4h1sz-6zg&s=10" alt="Chipá">
+                <h3>Chipá</h3>
+                <p>$1500</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj0Fn1koxqiJkxuRGQhnsDtMz95Y3cSWJbAQLC9UP5cg&s=10" alt="Porción de torta">
+                <h3>Porción de Torta</h3>
+                <p>$2500</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCxraVzE1GymWAWEJH1RhmRYwwCKUfttyljAgyulHBLg&s=10" alt="Porción de tostadas">
+                <h3>Porción de Tostadas</h3>
+                <p>$3000</p>
+            </article>
+
+            <article class="producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNgaC_n8ZC77YI-3Y0T3LT68IEoAdBOk8TACpu4GSakg&s=10" alt="Cookies">
+                <h3>Cookies</h3>
+                <p>$3000</p>
+            </article>
+
+        </section>
+
     </main>
-    <footer>
-        <h2>mail:</h2>
-        <h4>alumno29.salaberry.ramiro@ipm.edu.ar</h4>
-        <a href="http://127.0.0.1:3000/dia7/index.html?serverWindowId=6e61c4bc-b4d0-4d8a-8b0b-e785ccb4b842"><img height="100" width="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD4M6pOHw6qTkFDXXi96ZXv-eTkMQNJZBGIywsALAv1Q&s=10" alt="volver"></a>
-    </footer>
+
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+        <h2>Instituto Politécnico Modelo</h2>
+
+        <p>
+            Conocé más sobre nosotros y nuestro proyecto.
+        </p>
+
+        <a 
+            class="boton-sobre-nosotros"
+            href="{{url_for('footer')}}"
+        >
+            Sobre Nosotros
+        </a>
+
+    </div>
+
+    <div class="footer-abajo">
+
+        <p>
+            © 2026 Instituto Politécnico Modelo
+        </p>
+
+        <p>
+            Ramiro Salaberry &amp; Santiago Sainz
+        </p>
+
+    </div>
+        </footer>
 </body>
 </html>

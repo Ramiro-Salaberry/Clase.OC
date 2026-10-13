@@ -4,55 +4,284 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='album.css')}}">
 </head>
+
 <body>
-    <header><h1>Fotos plantas</h1></header>
+
+    <header>
+            <img width="75px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdSrijoh9-g9A_NOTaOjgBV9Q_KGL788r_z-GE8NEbAuCrzK1sI493G-M&s=10" alt="IPM">
+
+    <h1 id="titulo1">Fotos de Plantas</h1>
+
+    <div class="menu-hamburguesa">
+        <button class="boton-menu">☰</button>
+
+        <div class="menu-desplegable">
+            <a href="{{url_for('videosNE')}}">Videos naves Espaciales</a>
+            <a href="{{url_for('formulario')}}">Formulario</a>
+            <a href="{{url_for('receta')}}">Receta para hacer milanesas</a>
+            <a href="{{url_for('cafeteria')}}">Cafetería</a>
+            <a href="{{url_for('index')}}">Volver</a>
+
+        </div>
+    </div>
+    </header>
+
     <main>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3iW5AcwRiEpOoVvR7BpokxMlG_twTQ7GPss2EUv6kig&s" alt="foto">
-        <h2>planta monstera </h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREP6kb-8H0Onj23D9tgIUdtGbHJoubpyzK1nijppMUwg&s=10" alt="foto">
-        <h2>planta carnívora</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPCmFp9j-sQ7iBDiXqx5v5OMwTqqzKv4zZd8bK4PdtBw&s=10" alt="foto">
-        <h2>anturio</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiKpaZHi_bK7FksS8X46fP8v59sVtH9EYl8bhr2rA9Mg&s=10" alt="foto">
-        <h2>clivia</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc2nvmQWhor4-dvsveZ5S35-zkjVqvH_WJNNDv1ea00w&s=10" alt="foto">
-        <h2>margarita</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYE20BMEtL8jqiSQbHCRmnssx8tpafTg_ybG9dH7FljA&s=10" alt="foto">
-        <h2>caléndula naranja</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhQ4eTfDYmc88NDuV-zKh9nrdM7ACgb_s5aCK-cgQKxg&s=10" alt="foto">
-        <h2>Calathea cascabel</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ80wfF-54JEmFOb3lMgc0PNd_XAgsc6DFj_HKBEkJqzA&s=10" alt="foto">
-        <h2>bugambilia</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmNPXMhrfXZZzEqK1CR0AhzeIOaJWVLfhtNNFtd30z2Q&s=10" alt="foto">
-        <h2>yuyos</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZVqYUjNlxZYa-AV2wvBfvfGxC83VxmNaWBZKIn-dVA&s=10" alt="foto">
-        <h2>cerezo</h2>
-        <img src="https://content.cuerpomente.com/medio/2026/01/21/flor-de-manta_00000000_260121104531_752x501.webp" alt="foto">
-        <h2>flor de manta</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTkTzs2Ni16yF4aq-LDS7mfOUvTu3NSQBSGZe3P60SrtyKIP27yPOyUxU&s=10" alt="foto">
-        <h2>floripondio</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmsI7yYY6qT6FR0GjQsHTjKPD46RV_WZ3mNqEB9suu1Q&s=10" alt="foto">
-        <h2>magnolia </h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-gbRCa41VnG9Q5i3kZs7NTJvAZ38UDWPPWyonIv9ghA&s=10" alt="foto">
-        <h2>camassia</h2>
-        <img src="https://content.cuerpomente.com/medio/2026/01/21/hierba-de-san-benito_00000000_d17e5482_260121102521_1024x1024.webp" alt="foto">
-        <h2>hierba de santo benito</h2>
-        <img src="https://content.cuerpomente.com/medio/2026/01/21/salvia-nemorosa_00000000_260121102638_752x501.webp" alt="foto">
-        <h2>salvia nemorosa</h2>
-        <img src="https://content.cuerpomente.com/medio/2026/01/21/coreopsis_00000000_260227112602_752x501.webp" alt="foto">
-        <h2>coreopsis</h2>
-        <img src="https://content.cuerpomente.com/medio/2026/01/21/malva-rizada_00000000_260121102322_752x501.webp" alt="foto">
-        <h2>malva rizada</h2>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx2WLfUyUaOM3n6kKKDbravd4PaQ-HyTcyHf4OEx4byQ&s=10" alt="foto">
-        <h2>bromelias</h2>
-        <img src="https://www.consumer.es/app/uploads/fly-images/274322/bulbosas-1200x550-cc.jpg" alt="foto">
-        <h2>tulipanes</h2>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3iW5AcwRiEpOoVvR7BpokxMlG_twTQ7GPss2EUv6kig&s" alt="Planta monstera">
+                </div>
+                <div class="atras">
+                    <h2>Planta monstera</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREP6kb-8H0Onj23D9tgIUdtGbHJoubpyzK1nijppMUwg&s=10" alt="Planta carnívora">
+                </div>
+                <div class="atras">
+                    <h2>Planta carnívora</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPCmFp9j-sQ7iBDiXqx5v5OMwTqqzKv4zZd8bK4PdtBw&s=10" alt="Anturio">
+                </div>
+                <div class="atras">
+                    <h2>Anturio</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiKpaZHi_bK7FksS8X46fP8v59sVtH9EYl8bhr2rA9Mg&s=10" alt="Clivia">
+                </div>
+                <div class="atras">
+                    <h2>Clivia</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc2nvmQWhor4-dvsveZ5S35-zkjVqvH_WJNNDv1ea00w&s=10" alt="Margarita">
+                </div>
+                <div class="atras">
+                    <h2>Margarita</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYE20BMEtL8jqiSQbHCRmnssx8tpafTg_ybG9dH7FljA&s=10" alt="Caléndula naranja">
+                </div>
+                <div class="atras">
+                    <h2>Caléndula naranja</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhQ4eTfDYmc88NDuV-zKh9nrdM7ACgb_s5aCK-cgQKxg&s=10" alt="Calathea cascabel">
+                </div>
+                <div class="atras">
+                    <h2>Calathea cascabel</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ80wfF-54JEmFOb3lMgc0PNd_XAgsc6DFj_HKBEkJqzA&s=10" alt="Bugambilia">
+                </div>
+                <div class="atras">
+                    <h2>Bugambilia</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmNPXMhrfXZZzEqK1CR0AhzeIOaJWVLfhtNNFtd30z2Q&s=10" alt="Yuyos">
+                </div>
+                <div class="atras">
+                    <h2>Yuyos</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFZVqYUjNlxZYa-AV2wvBfvfGxC83VxmNaWBZKIn-dVA&s=10" alt="Cerezo">
+                </div>
+                <div class="atras">
+                    <h2>Cerezo</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://content.cuerpomente.com/medio/2026/01/21/flor-de-manta_00000000_260121104531_752x501.webp" alt="Flor de manta">
+                </div>
+                <div class="atras">
+                    <h2>Flor de manta</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTkTzs2Ni16yF4aq-LDS7mfOUvTu3NSQBSGZe3P60SrtyKIP27yPOyUxU&s=10" alt="Floripondio">
+                </div>
+                <div class="atras">
+                    <h2>Floripondio</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmsI7yYY6qT6FR0GjQsHTjKPD46RV_WZ3mNqEB9suu1Q&s=10" alt="Magnolia">
+                </div>
+                <div class="atras">
+                    <h2>Magnolia</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-gbRCa41VnG9Q5i3kZs7NTJvAZ38UDWPPWyonIv9ghA&s=10" alt="Camassia">
+                </div>
+                <div class="atras">
+                    <h2>Camassia</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://content.cuerpomente.com/medio/2026/01/21/hierba-de-san-benito_00000000_d17e5482_260121102521_1024x1024.webp" alt="Hierba de San Benito">
+                </div>
+                <div class="atras">
+                    <h2>Hierba de San Benito</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://content.cuerpomente.com/medio/2026/01/21/salvia-nemorosa_00000000_260121102638_752x501.webp" alt="Salvia nemorosa">
+                </div>
+                <div class="atras">
+                    <h2>Salvia nemorosa</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://content.cuerpomente.com/medio/2026/01/21/coreopsis_00000000_260227112602_752x501.webp" alt="Coreopsis">
+                </div>
+                <div class="atras">
+                    <h2>Coreopsis</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://content.cuerpomente.com/medio/2026/01/21/malva-rizada_00000000_260121102322_752x501.webp" alt="Malva rizada">
+                </div>
+                <div class="atras">
+                    <h2>Malva rizada</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx2WLfUyUaOM3n6kKKDbravd4PaQ-HyTcyHf4OEx4byQ&s=10" alt="Bromelias">
+                </div>
+                <div class="atras">
+                    <h2>Bromelias</h2>
+                </div>
+            </div>
+        </article>
+
+        <article class="tarjeta">
+            <div class="tarjeta-contenido">
+                <div class="frente">
+                    <img src="https://www.consumer.es/app/uploads/fly-images/274322/bulbosas-1200x550-cc.jpg" alt="Tulipanes">
+                </div>
+                <div class="atras">
+                    <h2>Tulipanes</h2>
+                </div>
+            </div>
+        </article>
+
     </main>
-    <footer>
-        <h2>mail:</h2>
-        <h4>alumno29.salaberry.ramiro@ipm.edu.ar</h4>
-        <a href="http://127.0.0.1:3000/dia7/index.html?serverWindowId=6e61c4bc-b4d0-4d8a-8b0b-e785ccb4b842"><img height="100" width="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD4M6pOHw6qTkFDXXi96ZXv-eTkMQNJZBGIywsALAv1Q&s=10" alt="volver"></a>
-    </footer>
+     <footer class="footer">
+
+    <div class="footer-contenido">
+
+        <h2>Instituto Politécnico Modelo</h2>
+
+        <p>
+            Conocé más sobre nosotros y nuestro proyecto.
+        </p>
+
+        <a 
+            class="boton-sobre-nosotros"
+            href="{{url_for('footer')}}"
+        >
+            Sobre Nosotros
+        </a>
+
+    </div>
+
+    <div class="footer-abajo">
+
+        <p>
+            © 2026 Instituto Politécnico Modelo
+        </p>
+
+        <p>
+            Ramiro Salaberry &amp; Santiago Sainz
+        </p>
+
+    </div>
+        </footer>
 </body>
 </html>
+   

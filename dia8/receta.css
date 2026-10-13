@@ -1,0 +1,453 @@
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+html {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header de extremo a extremo */
+header {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Contenido principal */
+main {
+    box-sizing: border-box;
+}
+
+/* Footer de extremo a extremo */
+footer {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+h2 {
+    color: blue;
+}
+#titulo1 {
+    color: white;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: rgb(6, 6, 133);
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+/* Contenedor del menú */
+.menu-hamburguesa {
+    position: relative;
+}
+
+/* Botón ☰ */
+.boton-menu {
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Menú oculto */
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+/* Links del menú */
+.menu-desplegable a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-desplegable a:hover {
+    background-color: #ddd;
+}
+
+/* Mostrar menú al pasar el mouse */
+.menu-hamburguesa:hover .menu-desplegable {
+    display: block;
+}
+/* FOOTER */
+
+.footer {
+    background-color: #0f172a;
+
+    color: white;
+
+    padding: 40px 20px 20px;
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+
+/* CONTENIDO */
+
+.footer-contenido h2 {
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+    color: #60a5fa;
+}
+
+.footer-contenido p {
+    color: #cbd5e1;
+
+    margin-bottom: 20px;
+
+    font-size: 15px;
+}
+
+
+/* BOTÓN */
+
+.boton-sobre-nosotros {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.boton-sobre-nosotros:hover {
+    background-color: #1d4ed8;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+}
+
+
+/* PARTE INFERIOR */
+
+.footer-abajo {
+    border-top: 1px solid #334155;
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+}
+
+.footer-abajo p {
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    margin: 5px;
+}
+
+
+/* ==============================
+   ESTILO GENERAL DE LA RECETA
+   ============================== */
+
+main {
+    max-width: 1000px;
+    width: 90%;
+    margin: 50px auto;
+    padding: 35px;
+    box-sizing: border-box;
+
+    background-color: #ffffff;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ==============================
+   TÍTULOS
+   ============================== */
+
+main h2 {
+    color: #3d3028;
+    font-size: 28px;
+    font-weight: 700;
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #e8d8c8;
+}
+
+/* Primer título */
+
+main h2:first-child {
+    margin-top: 0;
+}
+
+
+/* ==============================
+   LISTAS DE INGREDIENTES
+   ============================== */
+
+main ul {
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Tarjetas de ingredientes */
+
+main ul li {
+    position: relative;
+
+    padding: 15px 18px 15px 42px;
+
+    background-color: #faf7f3;
+    border: 1px solid #eee5dc;
+    border-radius: 10px;
+
+    color: #51453c;
+    font-size: 16px;
+    line-height: 1.5;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* Indicador visual */
+
+main ul li::before {
+    content: "✓";
+
+    position: absolute;
+    left: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #8b684c;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+/* Efecto al pasar el mouse */
+
+main ul li:hover {
+    background-color: #f3ebe2;
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   LISTA DE PREPARACIÓN
+   ============================== */
+
+main ol {
+    list-style: none;
+
+    counter-reset: paso;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Cada paso */
+
+main ol li {
+    counter-increment: paso;
+
+    position: relative;
+
+    padding: 22px 25px 22px 75px;
+
+    background-color: #faf8f5;
+    border: 1px solid #eee7df;
+    border-radius: 12px;
+
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Número del paso */
+
+main ol li::before {
+    content: counter(paso, decimal-leading-zero);
+
+    position: absolute;
+    top: 22px;
+    left: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    background-color: #6f4e37;
+    color: #ffffff;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Texto de cada paso */
+
+main ol li p {
+    margin: 0;
+
+    color: #514a44;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* Efecto de las instrucciones */
+
+main ol li:hover {
+    background-color: #f5f0e9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ==============================
+   TABLETS
+   ============================== */
+
+@media (max-width: 768px) {
+
+    main {
+        width: 94%;
+        padding: 25px;
+        margin: 35px auto;
+    }
+
+    main h2 {
+        font-size: 25px;
+    }
+
+    main ul {
+        grid-template-columns: 1fr;
+    }
+
+    main ol li {
+        padding: 20px 20px 20px 68px;
+    }
+
+    main ol li::before {
+        left: 16px;
+        top: 20px;
+    }
+
+    main ol li p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+}
+
+
+/* ==============================
+   CELULARES
+   ============================== */
+
+@media (max-width: 480px) {
+
+    main {
+        width: 94%;
+        padding: 18px;
+        margin: 25px auto;
+        border-radius: 12px;
+    }
+
+    main h2 {
+        font-size: 22px;
+        margin-top: 30px;
+        margin-bottom: 16px;
+    }
+
+    main ul li {
+        padding: 13px 12px 13px 38px;
+        font-size: 15px;
+    }
+
+    main ul li::before {
+        left: 13px;
+    }
+
+    main ol {
+        gap: 15px;
+    }
+
+    main ol li {
+        padding: 65px 16px 18px;
+    }
+
+    main ol li::before {
+        top: 15px;
+        left: 16px;
+
+        width: 35px;
+        height: 35px;
+    }
+
+    main ol li p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+}

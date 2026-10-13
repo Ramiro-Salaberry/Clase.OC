@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre Nosotros</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='footer.css')}}">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1>Sobre Nosotros</h1>
+
+        <p>Conocé a nuestro equipo</p>
+
+    </header>
+
+    <main class="contenedor">
+
+        <section class="tarjeta">
+
+            <img 
+                class="logo"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdSrijoh9-g9A_NOTaOjgBV9Q_KGL788r_z-GE8NEbAuCrzK1sI493G-M&s=10"
+                alt="Logo del Instituto Politécnico Modelo"
+            >
+
+            <h2>Ramiro Salaberry &amp; Santiago Sainz</h2>
+
+            <div class="informacion">
+
+                <p>
+                     alumno29.salaberry.ramiro@ipm.edu.ar
+                </p>
+
+                <p>
+                     alumno29.sainz.santiago@ipm.edu.ar
+                </p>
+
+                <p class="colegio">
+                     Instituto Politécnico Modelo
+                </p>
+
+            </div>
+
+            <a 
+                class="boton-volver"
+                href="{{url_for('index')}}"
+            >
+                Volver
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2026 Instituto Politécnico Modelo</p>
+
+    </footer>
+
+</body>
+
+</html>

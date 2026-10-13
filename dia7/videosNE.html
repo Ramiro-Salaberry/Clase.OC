@@ -4,21 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='videosNE.css')}}">
 </head>
 <body>
     <header>
-        <h1>Videos Naves Despegando</h1>
+            <img width="75px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdSrijoh9-g9A_NOTaOjgBV9Q_KGL788r_z-GE8NEbAuCrzK1sI493G-M&s=10" alt="IPM">
+
+    <h1 id="titulo2" >Videos de Naves Espaciales</h1>
+
+    <div class="menu-hamburguesa">
+        <button class="boton-menu">☰</button>
+
+        <div class="menu-desplegable">
+            <a href="{{url_for('album')}}">Fotos de Plantas</a>
+            <a href="{{url_for('formulario')}}">Formulario</a>
+            <a href="{{url_for('receta')}}">Receta para hacer milanesas</a>
+            <a href="{{url_for('cafeteria')}}">Cafetería</a>
+            <a href="{{url_for('index')}}">Volver</a>
+        </div>
+    </div>
     </header>
-    <main>
-        <nav>
-            <iframe width="958" height="482" src="https://www.youtube.com/embed/KOygw3QfO9o" title="Saturno V Apollo 11 despegue full HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="958" height="482" src="https://www.youtube.com/embed/0aiOMxW0zBY" title="Despegue del Discovery, cuidado con los parlantes!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </nav>
-    </main>
-    <footer>
-        <h2>mail:</h2>
-        <h4>alumno29.salaberry.ramiro@ipm.edu.ar</h4>
-        <a href="http://127.0.0.1:3000/dia7/index.html?serverWindowId=6e61c4bc-b4d0-4d8a-8b0b-e785ccb4b842"><img height="100" width="100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD4M6pOHw6qTkFDXXi96ZXv-eTkMQNJZBGIywsALAv1Q&s=10" alt="volver"></a>
-    </footer>
+<main class="videos">
+
+    <h2>Videos</h2>
+    <p class="descripcion">Despegues históricos de la exploración espacial.</p>
+
+    <section class="galeria-videos">
+
+        <article class="video">
+            <iframe
+                src="https://www.youtube.com/embed/KOygw3QfO9o"
+                title="Saturno V Apollo 11 despegue full HD"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+
+            <h3>Saturno V — Apollo 11</h3>
+            <p>Despegue de la misión Apollo 11.</p>
+        </article>
+
+        <article class="video">
+            <iframe
+                src="https://www.youtube.com/embed/0aiOMxW0zBY"
+                title="Despegue del Discovery"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+
+            <h3>Space Shuttle Discovery</h3>
+            <p>Despegue del transbordador Discovery.</p>
+        </article>
+
+    </section>
+
+</main>
+
+    <footer class="footer">
+
+    <div class="footer-contenido">
+
+        <h2>Instituto Politécnico Modelo</h2>
+
+        <p>
+            Conocé más sobre nosotros y nuestro proyecto.
+        </p>
+
+        <a 
+            class="boton-sobre-nosotros"
+            href="{{url_for('footer')}}"
+        >
+            Sobre Nosotros
+        </a>
+
+    </div>
+
+    <div class="footer-abajo">
+
+        <p>
+            © 2026 Instituto Politécnico Modelo
+        </p>
+
+        <p>
+            Ramiro Salaberry &amp; Santiago Sainz
+        </p>
+
+    </div>
+        </footer>
 </body>
 </html>
