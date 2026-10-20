@@ -144,10 +144,10 @@ header {
     margin: 0;
     padding: 20px 100px;
 
-    background-color: whitesmoke;
-    color: #493827;
+    background-color: rgb(141, 140, 140);
+    color: #ffffff;
 
-    border-bottom: 2px solid #d2b994;
+    border-bottom: 2px solid rgb(141, 140, 140);
     box-shadow: 0 4px 12px rgba(76, 55, 32, 0.10);
 }
 
@@ -179,7 +179,7 @@ header img {
 #titulo1 {
     margin: 0;
 
-    color: #493827;
+    color: #000000;
     font-size: 30px;
     font-weight: 700;
     text-align: center;
@@ -210,7 +210,7 @@ header img {
     width: 48px;
     height: 48px;
 
-    background-color: #806747;
+    background-color: #6d553a;
     color: white;
 
     border: 1px solid #6d553a;
@@ -456,6 +456,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(212, 209, 209);
 }
 
 /* Header de extremo a extremo */
@@ -475,4 +476,103 @@ footer {
     width: 100%;
     margin: 0;
     box-sizing: border-box;
+}
+/* =====================================
+   TARJETA DE DATOS INGRESADOS
+   ===================================== */
+
+.tarjeta-datos {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.tarjeta-datos-contenido {
+    width: 100%;
+    max-width: 420px;
+    padding: 30px;
+    background-color: rgb(141, 140, 140);
+    border: 1px solid rgb(141, 140, 140);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(76, 55, 32, 0.10);
+}
+
+/* TÍTULO */
+
+.tarjeta-datos-contenido h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+/* DESCRIPCIÓN */
+
+.tarjeta-datos-contenido .descripcion {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #3b3b3b;
+    font-size: 15px;
+}
+
+/* INFORMACIÓN INGRESADA */
+
+.dato-ingresado {
+    margin-bottom: 15px;
+    padding: 12px;
+    background-color: #fffaf2;
+    border: 1px solid #e0cfb4;
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+}
+
+.dato-ingresado p {
+    margin: 0;
+    color: #493827;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.dato-ingresado strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #666666;
+}
+
+/* BOTÓN VOLVER */
+
+.boton-volver {
+    display: block;
+    margin-top: 25px;
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.boton-volver:hover {
+    background-color: #444;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 500px) {
+    .tarjeta-datos {
+        padding: 30px 15px;
+    }
+
+    .tarjeta-datos-contenido {
+        padding: 22px;
+    }
+
+    .tarjeta-datos-contenido h2 {
+        font-size: 26px;
+    }
 }

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Datos ingresados</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='formulario.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <a href="{{url_for('home')}}"><img width="75px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdSrijoh9-g9A_NOTaOjgBV9Q_KGL788r_z-GE8NEbAuCrzK1sI493G-M&s=10" alt="IPM"></a>
+
+        <h1>Datos ingresados</h1>
+    </header>
+
+    <main class="tarjeta-datos">
+
+        <section class="tarjeta-datos-contenido">
+
+            <h2>Registro completado</h2>
+
+            <p class="descripcion">
+                Estos son los datos que ingresaste en el formulario.
+            </p>
+
+            <div class="dato-ingresado">
+                <p>
+                    <strong>Nombre:</strong>
+                    {{ nombre }}
+                </p>
+            </div>
+
+            <div class="dato-ingresado">
+                <p>
+                    <strong>Edad:</strong>
+                    {{ edad }}
+                </p>
+            </div>
+
+            <div class="dato-ingresado">
+                <p>
+                    <strong>Fecha de nacimiento:</strong>
+                     {{ fecha[8:10] }}/{{ fecha[5:7] }}/{{ fecha[0:4] }}
+                </p>
+            </div>
+
+            <div class="dato-ingresado">
+                <p>
+                    <strong>Términos y condiciones:</strong>
+
+                    {% if terminos %}
+                        True
+                    {% else %}
+                        False
+                    {% endif %}
+                </p>
+            </div>
+
+            <a class="boton-volver" href="{{ url_for('home') }}">
+                Volver al inicio
+            </a>
+
+        </section>
+
+    </main>
+    <footer class="footer">
+
+        <div class="footer-contenido">
+
+            <h2>Instituto Politécnico Modelo</h2>
+
+            <p>
+                Conocé más sobre nosotros y nuestro proyecto.
+            </p>
+
+            <a 
+                class="boton-sobre-nosotros"
+                href="{{url_for('footer')}}"
+            >
+                Sobre Nosotros
+            </a>
+
+        </div>
+
+        <div class="footer-abajo">
+
+            <p>
+                © 2026 Instituto Politécnico Modelo
+            </p>
+
+            <p>
+                Ramiro Salaberry &amp; Santiago Sainz
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
